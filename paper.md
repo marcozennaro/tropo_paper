@@ -232,6 +232,10 @@ reflecting medium.
 Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
+![Map of the node in Albufeira (PT), the gateawy in Grand Canary (ES)
+and the launching site of the closest radiosonde in Casablanca,
+Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
+
 \autoref{fig:Sigfox-map} 
 shows that the nearest radiosonde is in Casablanca, Morocco. In
 \autoref{fig:Gradient-Sigfox} 
@@ -239,9 +243,6 @@ we see that the DeltaN/Deltah value drops below the threshold
 value of -157, so a tropospheric duct is clearly the propagation
 mechanism since the earth curvature is blocking the line of sight.
 
-![Map of the node in Albufeira (PT), the gateawy in Grand Canary (ES)
-and the launching site of the closest radiosonde in Casablanca,
-Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
 
 ![Refractivity gradient DeltaN/Deltah. The -157 N units per km
 threshold is crossed very close to the surface in this link between
