@@ -229,9 +229,10 @@ Given the extremely long distance, only tropospheric ducting propagation
 can explain this link, entirely over sea water, which is a strong
 reflecting medium.
 
-Launching the scripts we obtained \autoref{fig:map-Sigfox}
+Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
-\autoref{fig:map-Sigfox} 
+
+\autoref{fig:Sigfox-map} 
 shows that the nearest radiosonde is in Casablanca, Morocco. In
 \autoref{fig:Gradient-Sigfox} 
 we see that the DeltaN/Deltah value drops below the threshold
@@ -240,7 +241,7 @@ mechanism since the earth curvature is blocking the line of sight.
 
 ![Map of the node in Albufeira (PT), the gateawy in Grand Canary (ES)
 and the launching site of the closest radiosonde in Casablanca,
-Morocco. \label{fig:map-Sigfox}](map-sigfox-v6.png)
+Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
 
 ![Refractivity gradient DeltaN/Deltah. The -157 N units per km
 threshold is crossed very close to the surface in this link between
