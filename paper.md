@@ -47,7 +47,7 @@ Presently, we generalyze the analysis to cover any wireless link for
 which the transmitter and receiver sites are specified, as well as the
 date on which the very long distance link was observed.
 
-Anomalous tropospheric propagation is defined @itu1990effects as a transmission
+Anomalous tropospheric propagation is defined [@itu1990effects] as a transmission
 that extends beyond the geographical horizon. Normally, in those areas,
 signals start to rapidly reduce in strength. Viewers living in such a
 "deep fringe" reception area will notice that during certain
@@ -83,7 +83,7 @@ the possible presence of the conditions for the existence of
 super-refraction (which can extend the propagation moderately beyond the
 line of sight) or tropospheric ducts, which can explain transmissions
 over distances of thousands of kilometers.
-Figure \autoref{fig:duct} depicts the
+\autoref{fig:duct} depicts the
 latter case, which is more frequent in paths over seawater, since it is
 a very good reflector.
 
@@ -101,14 +101,14 @@ layers\label{fig:duct}](tropospheric-duct.png)
 We built a series of software tools to analyze anomalous tropospheric
 propagation links. They are available on Github under an MIT License
 and also as a Jupyter Notebook hosted by Google Colab as shown in
-Figure \autoref{fig:jupyter}. Sharing
+\autoref{fig:jupyter}. Sharing
 the code using Google Colab facilitates the usage of these tools for
 researchers, practitioners, or anyone interested, by removing the
 installation requirements (Colab runs in a browser). While the complete
 set of tools include more than 20 separate pieces of code (to parse data
 from online databases and find long links, to gather data from TTN,
 etc), in this paper we will focus on the tools that are part of the
-workflow shown in Figure \autoref{fig:workflow}. All the code is compatible with Python 3 and
+workflow shown in \autoref{fig:workflow}. All the code is compatible with Python 3 and
 runs on Windows, OSX and Linux devices.
 
 ![Jupyter Notebook hosted by Google
@@ -131,7 +131,7 @@ Following is a description of the workflow to analyze a specific link.
 
 2.  to visualize the location of the radiosonde, launch the script
     called *map-rsigra.py*. This will produce a map similar to the one
-    shown in Figure \autoref{fig:Munich-map}. This is not a mandatory step in the
+    shown in \autoref{fig:Munich-map}. This is not a mandatory step in the
     workflow, but gives an idea of where the nearest radiosonde is
     located.
 
@@ -166,17 +166,17 @@ Following is a description of the workflow to analyze a specific link.
     the transmission to very long distances. The trapping of the wave in
     the vertical plane accounts for the fact that the attenuation
     increases linearly with the distance, instead of quadratically as is
-    the case in normal propagation conditions [@rh], so the received
+    the case in normal propagation conditions, so the received
     signal level could be higher than that of free space propgation.
-    Figure \autoref{fig:Munich-Gradient} is an example of the output of the
+    \autoref{fig:Munich-Gradient} is an example of the output of the
     script showing the threshold for ducting conditions.
 
     There is also the option to gather data for multiple dates, and this
-    is done via the *graph-rsigra-interval.py* script. Figure \autoref{fig:multi_days_grad} shows an interesting case in which only
+    is done via the *graph-rsigra-interval.py* script. \autoref{fig:multi_days_grad} shows an interesting case in which only
     one of the launches from this site surpassed the -157 threshold that
     indicates the condition for the possibility of a tropospheric duct.
     These launches were made at the Rivolto site in Italy, which is the
-    closest to the beyond the horizon links reported in [@troppo].
+    closest to the beyond the horizon links reported in [@zennaro2020troppo].
 
 # Use cases
 
@@ -185,14 +185,14 @@ Following is a description of the workflow to analyze a specific link.
 Using TTNMapper, a popular application to check LoRaWAN coverage using
 TTN, we identified a 280 km long link crossing over Munich in Germany.
 Leveraging our BotRf tool [@zennaro2016radio], we obtained the corresponding terrain
-profile shown in Figure \autoref{fig:munich-profile}, evidencing that the line of sight is
+profile shown in \autoref{fig:munich-profile}, evidencing that the line of sight is
 completely blocked and therefore the transmission must be attributed to
 anomalouus tropospheric propagation. Launching the previous scripts
-produced Figures \autoref{fig:Munich-map} and \autoref{fig:Munich-Gradient}. Figure \autoref{fig:Munich-map} shows that
+produced \autoref{fig:Munich-map} and \autoref{fig:Munich-Gradient}. \autoref{fig:Munich-map} shows that
 the radiosonde in the IGRA database which is closest to the center of
 the link lies at a distance of 25 km. Data collected by this radiosonde
 on the same day in which the anomalous propagation was reported,
-processed by the *graph-rsigra-day.py* script produced Figure \autoref{fig:Munich-Gradient}.
+processed by the *graph-rsigra-day.py* script produced \autoref{fig:Munich-Gradient}.
 The -157 DeltaN/Deltah gradient in N units per km is shown to be
 crossed at an altitude of 1800 m, confirming the probable presence of a
 tropospheric duct.
@@ -229,10 +229,10 @@ Given the extremely long distance, only tropospheric ducting propagation
 can explain this link, entirely over sea water, which is a strong
 reflecting medium.
 
-Launching the scripts we obtained Figures \autoref{fig:map-Sigfox}
+Launching the scripts we obtained \autoref{fig:map-Sigfox}
 and \autoref{fig:Gradient-Sigfox}.
-Figure \autoref{fig:map-Sigfox} 
-shows that the nearest radiosonde is in Casablanca, Morocco. In Figure
+\autoref{fig:map-Sigfox} 
+shows that the nearest radiosonde is in Casablanca, Morocco. In
 \autoref{fig:Gradient-Sigfox} 
 we see that the DeltaN/Deltah value drops below the threshold
 value of -157, so a tropospheric duct is clearly the propagation
@@ -242,7 +242,7 @@ mechanism since the earth curvature is blocking the line of sight.
 and the launching site of the closest radiosonde in Casablanca,
 Morocco. \label{fig:map-Sigfox}](map-sigfox-v6.png)
 
-![Refractivity gradient $\Delta$N/$\Delta$h. The -157 N units per km
+![Refractivity gradient DeltaN/Deltah. The -157 N units per km
 threshold is crossed very close to the surface in this link between
 Portugal and Spain, as revealed by the tropspheric data gathered by the
 radiosonde in Morocco. \label{fig:Gradient-Sigfox}](Gradient-Sigfox-01.png)
