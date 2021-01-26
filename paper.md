@@ -232,7 +232,7 @@ reflecting medium.
 Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
-![Map of the node in Albufeira (PT), the gateawy in Grand Canary (ES)
+![Map of the node in Albufeira PT, the gateawy in Grand Canary ES
 and the launching site of the closest radiosonde in Casablanca,
 Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
 
