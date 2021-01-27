@@ -218,7 +218,7 @@ for tropospheric duct were present at a height of 100 m on 12 January
 ## Sigfox link between Portugal and Grand Canary Island
 
 On social media some extremely long Sigfox links have been documented 
-@tweet]. As this is an LPWAN technology using a much narrower
+[@tweet]. As this is an LPWAN technology using a much narrower
 band than that of LoRaWAN, it is understandable that longer links can be
 established. Thanks to the collaboration with the Sigfox operator we
 were able to get the exact positions and time of such long links. One of
