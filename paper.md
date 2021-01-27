@@ -27,40 +27,39 @@ bibliography: paper.bib
 
 Propagation beyond the horizon is a well known field of research which
 has been used to establish long communication links since WW II.
-Oftentimes people have experienced abnormal reception of FM radio
-channels or TV broadcasts, especially in the summer. Nowadays, with the
+Oftentimes people have experienced abnormal reception of broadcast FM or TV 
+channels, especially in the summer. Nowadays, with the
 exponential growth of Internet of Things (IoT) networks, many users have
 documented very long links on the ISM bands (868 MHz in Europe) used by
 such devices. It is worth noting that beyond the horizon transmission is
 also a source of interference to other users, which might be unaware of
 the origin of the spurious signals [@imam2009prediction]. Shedding light on the
 anomalous propagation mechanism is a first and important step in the
-mitigation efforts.
+mitigation efforts and in explaining radio signal propagation beyond the line of sight.
 
 In a previous study [@zennaro2020troppo], we focussed on the use of the crowd
 sourced initiative TheThingsNetwork (TTN), since it allowed leveraging
 the openness of that system and the great number of TTN gateways
-deployed globally, to check the reach of a simple IoT node that we have
-installed on the roof of our institute.
+deployed globally, to check the reach of simple IoT nodes.
 
-Presently, we generalyze the analysis to cover any wireless link for
+Presently, we generalize the analysis to cover any wireless link for
 which the transmitter and receiver sites are specified, as well as the
-date on which the very long distance link was observed.
+date on which the anomalous link was observed.
 
 Anomalous tropospheric propagation is defined [@itu1990effects] as a transmission
 that extends beyond the geographical horizon. Normally, in those areas,
-signals start to rapidly reduce in strength. Viewers living in such a
+signals start to rapidly reduce in strength. TV broadcast viewers living in such a
 "deep fringe" reception area will notice that during certain
 conditions, weak signals, normally masked by noise, increase its
 strength to the point of allowing normal reception. Furthermore, in
-special conditions related to the state of the troposphere at a given
-time along the trajectory, the signals can reach very long distances
+special conditions related to the specific state of the troposphere 
+along the trajectory, the signals can reach very long distances
 [ko1983anomalous]. Tropospheric propagated waves travel in the part
 of the atmosphere adjacent to the surface and extending to some 12000 m.
 Such signals are thus directly affected by weather conditions extending
 over hundreds of kilometers.
 
-Even if the maximum transmitted power of 14 dBm in LPWAN networks in
+Even if the maximum transmit power of 14 dBm in LPWAN networks in
 Europe is much lower than that of FM transmissions, the
 advantage in terms of receiver sensitivity of both LoRa (thanks to the
 processing gain offered by spread spectrum modulation) and Sigfox
@@ -70,11 +69,11 @@ exist.
 
 In this paper we present a set of software tools that allow the analysis
 of any radio link making use of the publicly available IGRA (Integrated
-Global Radiosonde Archive) database [@IGRA] of metereological
+Global Radiosonde Archive) database [@IGRA] of meteorological
 radiosondes that are periodically launched all over the globe.
 
-These tools facilitate the analysis of beyond the horizon propagation by
-automating the process of identifying the nearest radiosonde launch site
+These tools facilitate the analysis of anomalous propagation by
+automating the process of identifying which radiosonde launch site is closest
 to any pair of points at a specific date.
 
 The data from the identified radiosonde are then used to graph the
@@ -87,9 +86,9 @@ over distances of thousands of kilometers.
 latter case, which is more frequent in paths over seawater, since it is
 a very good reflector.
 
-![Tropspheric duct propagation: Wave reflection on the surafce (water or
+![Tropospheric duct propagation: Wave reflection on the surface (water or
 ground) is sharp, while in the tropospheric layer it is a succession of
-gradual bends. Happens more frequently in pathts over water, where the
+gradual bends. Happens more frequently in paths over water, where the
 evaporation favors the formation of inversion
 layers\label{fig:duct}](tropospheric-duct.png)
 
@@ -100,7 +99,7 @@ layers\label{fig:duct}](tropospheric-duct.png)
 
 We built a series of software tools to analyze anomalous tropospheric
 propagation links. They are available on Github under an MIT License
-and also as a Jupyter Notebook hosted by Google Colab as shown in
+and also as a Jupyter Notebook hosted by Google Colab. A screenshot is shown in
 \autoref{fig:jupyter}. Sharing
 the code using Google Colab facilitates the usage of these tools for
 researchers, practitioners, or anyone interested, by removing the
@@ -111,7 +110,7 @@ etc), in this paper we will focus on the tools that are part of the
 workflow shown in \autoref{fig:workflow}. All the code is compatible with Python 3 and
 runs on Windows, OSX and Linux devices.
 
-![Jupyter Notebook hosted by Google
+![Screenshot of Jupyter Notebook hosted by Google
 Colab. \label{fig:jupyter}](google-colab-cattura-esempio-2511-04.png)
 
 ![Workflow using the Python tools developed. \label{fig:workflow}](diagram10.png)
@@ -123,7 +122,7 @@ Following is a description of the workflow to analyze a specific link.
     transmitter and the receiver, or the node and the gateway using 
     LPWAN's naming convention. Next the date and time when the link has
     been documented must be supplied. The output is the name of the
-    radiosonde closest to the mid point between the two ends which has
+    radiosonde closest to the midpoint between the two ends which has
     measurements available for the specific date. To determine its
     location we use the IGRA database, which contains radiosonde and
     pilot balloon observations from over 2700 globally distributed
@@ -167,7 +166,7 @@ Following is a description of the workflow to analyze a specific link.
     the vertical plane accounts for the fact that the attenuation
     increases linearly with the distance, instead of quadratically as is
     the case in normal propagation conditions, so the received
-    signal level could be higher than that of free space propgation.
+    signal level could be higher than that corresponding to free space propagation.
     \autoref{fig:Munich-Gradient} is an example of the output of the
     script showing the threshold for ducting conditions.
 
@@ -183,11 +182,11 @@ Following is a description of the workflow to analyze a specific link.
 ## LoRaWAN link in Germany
 
 Using TTNMapper, a popular application to check LoRaWAN coverage using
-TTN, we identified a 280 km long link crossing over Munich in Germany.
+TTN, a 280 km link crossing over Munich in Germany was identified.
 Leveraging our BotRf tool [@zennaro2016radio], we obtained the corresponding terrain
 profile shown in \autoref{fig:munich-profile}, evidencing that the line of sight is
 completely blocked and therefore the transmission must be attributed to
-anomalouus tropospheric propagation. Launching the previous scripts
+anomalous tropospheric propagation. Launching the previous scripts
 produced \autoref{fig:Munich-map} and \autoref{fig:Munich-Gradient}. \autoref{fig:Munich-map} shows that
 the radiosonde in the IGRA database which is closest to the center of
 the link lies at a distance of 25 km. Data collected by this radiosonde
@@ -206,11 +205,11 @@ sight. \label{fig:munich-profile}](munich-profile.png)
 positions of the node, gateway and the closest radiosonde launch
 site. \label{fig:Munich-map}](Munich-map-01.png)
 
-![Refractivity gradient Delta/Deltah versus height in Munich. The
+![Refractivity gradient DeltaN/Deltah versus height in Munich. The
 -157 threshold is crossed at the height of 1800 m denoting a
 tropospheric duct. \label{fig:Munich-Gradient}](Munich-Gradient-05.png)
 
-![Refractivity gradient Delta/Deltah versus height corresponding
+![Refractivity gradient DeltaN/Deltah versus height corresponding
 to 4 days launches from the ITM 00016045 station in Italy. Conditions
 for tropospheric duct were present at a height of 100 m on 12 January
 2020. \label{fig:multi_days_grad}](multi_days_grad-02.png)
@@ -218,8 +217,8 @@ for tropospheric duct were present at a height of 100 m on 12 January
 
 ## Sigfox link between Portugal and Grand Canary Island
 
-On social media some extremely long links have been documented using
-Sigfox [@tweet]. As this is an LPWAN technology using a much narrower
+On social media some extremely long Sigfox links have been documented 
+@tweet]. As this is an LPWAN technology using a much narrower
 band than that of LoRaWAN, it is understandable that longer links can be
 established. Thanks to the collaboration with the Sigfox operator we
 were able to get the exact positions and time of such long links. One of
@@ -232,7 +231,7 @@ reflecting medium.
 Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
-![Map of the node in Albufeira PT, the gateawy in Grand Canary ES
+![Map of the node in Albufeira PT, the gateway in Grand Canary ES
 and the launching site of the closest radiosonde in Casablanca,
 Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
 
@@ -246,7 +245,7 @@ mechanism since the earth curvature is blocking the line of sight.
 
 ![Refractivity gradient DeltaN/Deltah. The -157 N units per km
 threshold is crossed very close to the surface in this link between
-Portugal and Spain, as revealed by the tropspheric data gathered by the
+Portugal and Spain, as revealed by the tropospheric data gathered by the
 radiosonde in Morocco. \label{fig:Gradient-Sigfox}](Gradient-Sigfox-01.png)
 
 # Conclusions and future work
