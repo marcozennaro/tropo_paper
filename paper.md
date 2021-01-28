@@ -90,7 +90,7 @@ a very good reflector.
 ground) is sharp, while in the tropospheric layer it is a succession of
 gradual bends. Happens more frequently in paths over water, where the
 evaporation favors the formation of inversion
-layers\label{fig:duct}](tropospheric-duct.png)
+layers.\label{fig:duct}](tropospheric-duct.png)
 
 
 
@@ -228,12 +228,12 @@ Given the extremely long distance, only tropospheric ducting propagation
 can explain this link, entirely over sea water, which is a strong
 reflecting medium.
 
-Launching the scripts we obtained \autoref{fig:Sigfox-map}
+Launching the scripts we obtained \autoref{fig:Map-Sigfox-v5}
 and \autoref{fig:Gradient-Sigfox}.
 
 ![Map of the node in Albufeira PT, the gateway in Grand Canary ES
 and the launching site of the closest radiosonde in Casablanca,
-Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
+Morocco. \label{fig:Sigfox-map}](map-sigfox-v5.png)
 
 \autoref{fig:Sigfox-map} 
 shows that the nearest radiosonde is in Casablanca, Morocco. In
