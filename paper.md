@@ -228,7 +228,7 @@ Given the extremely long distance, only tropospheric ducting propagation
 can explain this link, entirely over sea water, which is a strong
 reflecting medium.
 
-Launching the scripts we obtained \autoref{fig:Map-Sigfox-v5}
+Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
 ![Map of the node in Albufeira PT, the gateway in Grand Canary ES
