@@ -217,6 +217,19 @@ for tropospheric duct were present at a height of 100 m on 12 January
 
 ## Sigfox link between Portugal and Grand Canary Island
 
+
+![Map of the node in Albufeira PT, the gateway in Grand Canary ES
+and the launching site of the closest radiosonde in Casablanca,
+Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
+
+
+![Refractivity gradient DeltaN/Deltah. The -157 N units per km
+threshold is crossed very close to the surface in this link between
+Portugal and Spain, as revealed by the tropospheric data gathered by the
+radiosonde in Morocco. \label{fig:Gradient-Sigfox}](Gradient-Sigfox-01.png)
+
+
+
 On social media some extremely long Sigfox links have been documented 
 [@tweet]. As this is an LPWAN technology using a much narrower
 band than that of LoRaWAN, it is understandable that longer links can be
@@ -231,9 +244,6 @@ reflecting medium.
 Launching the scripts we obtained \autoref{fig:Map-Sigfox-v6}
 and \autoref{fig:Gradient-Sigfox}.
 
-![Map of the node in Albufeira PT, the gateway in Grand Canary ES
-and the launching site of the closest radiosonde in Casablanca,
-Morocco. \label{fig:Sigfox-map}](map-sigfox-v6.png)
 
 \autoref{fig:Sigfox-map} 
 shows that the nearest radiosonde is in Casablanca, Morocco. In
@@ -242,11 +252,6 @@ we see that the DeltaN/Deltah value drops below the threshold
 value of -157, so a tropospheric duct is clearly the propagation
 mechanism since the earth curvature is blocking the line of sight.
 
-
-![Refractivity gradient DeltaN/Deltah. The -157 N units per km
-threshold is crossed very close to the surface in this link between
-Portugal and Spain, as revealed by the tropospheric data gathered by the
-radiosonde in Morocco. \label{fig:Gradient-Sigfox}](Gradient-Sigfox-01.png)
 
 # Conclusions and future work
 
