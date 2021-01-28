@@ -244,8 +244,7 @@ Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
 
-\autoref{fig:Sigfox-map} 
-shows that the nearest radiosonde is in Casablanca, Morocco. In
+\autoref{fig:Sigfox-map} shows that the nearest radiosonde is in Casablanca, Morocco. In
 \autoref{fig:Gradient-Sigfox} 
 we see that the DeltaN/Deltah value drops below the threshold
 value of -157, so a tropospheric duct is clearly the propagation
