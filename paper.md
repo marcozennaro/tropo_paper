@@ -98,7 +98,7 @@ layers.\label{fig:duct}](tropospheric-duct.png)
 # Python tools
 
 We built a series of software tools to analyze anomalous tropospheric
-propagation links. They are available on Github under an MIT License
+propagation links. They are available on Github [@github] under an MIT License
 and also as a Jupyter Notebook hosted by Google Colab. A screenshot is shown in
 \autoref{fig:jupyter}. Sharing
 the code using Google Colab facilitates the usage of these tools for
