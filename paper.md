@@ -218,9 +218,6 @@ for tropospheric duct were present at a height of 100 m on 12 January
 ## Sigfox link between Portugal and Grand Canary Island
 
 
-
-
-
 On social media some extremely long Sigfox links have been documented 
 [@tweet]. As this is an LPWAN technology using a much narrower
 band than that of LoRaWAN, it is understandable that longer links can be
@@ -233,11 +230,9 @@ can explain this link, entirely over sea water, which is a strong
 reflecting medium.
 
 
-![Map of the node in Albufeira PT, the gateway in Grand Canary ES
+![Map of the node in Albufeira, Porugal, the gateway in Grand Canary, Spain
 and the launching site of the closest radiosonde in Casablanca,
 Morocco. \label{fig:Sigfox-map}](Map-Sigfox-v6.png)
-
-
 
 ![Refractivity gradient DeltaN/Deltah. The -157 N units per km
 threshold is crossed very close to the surface in this link between
@@ -245,7 +240,7 @@ Portugal and Spain, as revealed by the tropospheric data gathered by the
 radiosonde in Morocco. \label{fig:Gradient-Sigfox}](Gradient-Sigfox-01.png)
 
 
-Launching the scripts we obtained \autoref{fig:Map-Sigfox-v6}
+Launching the scripts we obtained \autoref{fig:Sigfox-map}
 and \autoref{fig:Gradient-Sigfox}.
 
 
